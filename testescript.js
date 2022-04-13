@@ -1,10 +1,30 @@
-const body = document.querySelector('.body');
-//const btn = document.querySelector('.btn');
+function numbers(number2){
 
-/* btn.onclick = */ function theme(){
+    let number1 = document.getElementById('result').innerHTML;
 
-    //alert('Teste');
+   document.getElementById('result').innerHTML = number1 + number2;
+}
 
-//    this.classList.toggle('active');
-    body.classList.toggle('active');
+function resultFinal(){
+
+    let addNumbers = document.getElementById('result').innerHTML;
+
+    document.getElementById('result').innerHTML = eval(addNumbers);
+}
+
+function cleanAll(){
+
+    let cleanNumbers = document.getElementById('result').innerHTML = '';
+}
+
+function removeNumber(){
+
+    let removeJustOneNumber = document.getElementById('result').innerHTML;
+
+
+    if(removeJustOneNumber){
+
+        document.getElementById('result').innerHTML = 
+        removeJustOneNumber.substring(0, removeJustOneNumber.length -1);
+    }
 }

@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqui tambem</title>
+    <title>Calculator</title>
 
     <link rel="stylesheet" href="testecss.css">
-</head>
-<body class="body">
 
-    <div class="container">
-    <input type="button" value="TROCAR" class="btn" onclick="theme()">
+</head>
+<body>
+
+    <div class="mainBlock">
+
+       <div class="blockResult"> </div>
+       
+       <p class="result" id="result"></p>
+
+        <table class="calculator">
+
+            <tr>
+                <td><input type="button" value="7" onclick="numbers('7')" id="btn"></td>
+                <td><input type="button" value="8" onclick="numbers('8')" id="btn"></td>
+                <td><input type="button" value="9" onclick="numbers('9')" id="btn"></td>
+                <td><input type="button" value="*" onclick="numbers('*')" id="btn"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" onclick="numbers('4')" id="btn"></td>
+                <td><input type="button" value="5" onclick="numbers('5')" id="btn"></td>
+                <td><input type="button" value="6" onclick="numbers('6')" id="btn"></td>
+                <td><input type="button" value="-" onclick="numbers('-')" id="btn"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="1" onclick="numbers('1')" id="btn"></td>
+                <td><input type="button" value="2" onclick="numbers('2')" id="btn"></td>
+                <td><input type="button" value="3" onclick="numbers('3')" id="btn"></td>
+                <td><input type="button" value="+" onclick="numbers('+')" id="btn"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="0" onclick="numbers('0')" id="btn"></td>
+                <td><input type="button" value="<" onclick="removeNumber()" id="btn"></td>
+                <td><input type="button" value="C" onclick="cleanAll()" id="btn"></td>
+                <td><input type="button" value="/" onclick="numbers('/')" id="btn"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="%" onclick="numbers('%')" id="btn"></td>
+                <td><input type="button" value="." onclick="numbers('.')" id="btn"></td>
+                <td><input type="button" value="," onclick="numbers(',')" id="btn"></td>
+                <td><input type="button" value="=" onclick="resultFinal()" id="btn"></td>
+            </tr>
+
+        </table>
+
     </div>
     
-    <script src="testescript.js"></script>
+<script src="testescript.js"></script>
 </body>
 </html>
